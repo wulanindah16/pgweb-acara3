@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<div class="container">
+        <div class="card mt-4 shadow">
+            <div class="card-header text-center">
+                <h1><i class="fa-solid fa-calculator"></i> CALCULATOR</h1>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label for="nilai1" class="form-label">Nilai 1</label>
+                    <input type="number" class="form-control" id="nilai1" value="0">
+                  </div>
+                <div class="mb-3">
+                    <label for="nilai2" class="form-label">Nilai 2</label>
+                    <input type="number" class="form-control" id="nilai2" value="0">
+                  </div>
+                <div class="mb-3 text-center">
+                    <button type="button" class="btn btn-primary" onclick="penjumlahan()">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-danger" onclick="pengurangan()">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-success"  onclick="perkalian()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button type="button" class="btn btn-warning"  onclick="pembagian()">
+                        <i class="fa-solid fa-divide"></i>
+                    </button>
+                </div>
+                <hr>
+                <div class="text-center">
+                    <h3>Hasil</h3>
+                    <h1 id="hasil" class="text-success"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-2">
+            <small class="text-secondary">wulanindah@2023</small>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // penjumlahan
+        function penjumlahan() {
+            let n1 = document.getElementById("nilai1").value;
+            let n2 = document.getElementById("nilai2").value;
+            let hasil = parseFloat(n1) + parseFloat(n2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        // pengurangan
+        function pengurangan() {
+            let n1 = document.getElementById("nilai1").value;
+            let n2 = document.getElementById("nilai2").value;
+            let hasil = parseFloat(n1) - parseFloat(n2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        // perkalian
+        function perkalian() {
+            let n1 = document.getElementById("nilai1").value;
+            let n2 = document.getElementById("nilai2").value;
+            let hasil = parseFloat(n1) * parseFloat(n2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+        // pembagian
+        function pembagian() {
+            let n1 = document.getElementById("nilai1").value;
+            let n2 = document.getElementById("nilai2").value;
+            let hasil = parseFloat(n1) / parseFloat(n2);
+            document.getElementById("hasil").innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
